@@ -1,3 +1,6 @@
+html{scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -21,6 +24,7 @@ body {
     align-items: center;
     border: 0.5px solid white; /* 1px solid white border */
     border-radius: 10px; /* Adjust the border-radius as needed */
+    overflow: hidden;
 }
 
 .top-section {
@@ -29,6 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .logo-left {
@@ -46,6 +51,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .profile-picture {
@@ -72,6 +78,7 @@ body {
     margin-top: 20px;
     display: flex;
     gap: 15px;
+    overflow: hidden;
 }
 
 .social-icon {
@@ -107,6 +114,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hire-me-button i {
@@ -118,59 +126,127 @@ body {
     color: #FF9700;
     border: 1px solid #fff; /* Adjust to your preferred hover color */
 }
-/* Mobile Devices (up to 480px) */
-@media (max-width: 480px) {
-    .left-container {
-        width: 100vw;
-        height: auto;
-        position: relative;
-        top: 0;
-        left: 50px;
-        border-radius: 0; /* Remove border radius for mobile */
-    }
+/* Media Queries for Responsive Design */
 
-    .top-section {
-        flex-direction: column;
-        align-items: center;
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .left-container {
+        width: 30vw;
+        left: 10px;
     }
 
     .name-top-right h1 {
-        margin-left: 0;
-        text-align: center;
+        margin-left: 50px;
     }
 
     .profile-picture {
-        height: 200px;
-        width: 200px;
+        height: 220px;
+        width: 220px;
+    }
+
+    .info h2 {
+        font-size: 1.2rem;
     }
 
     .hire-me-button {
-        margin-top: 10px;
-        padding: 8px 15px;
-    }
-
-    .social-media {
-        justify-content: center;
-        gap: 10px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
 
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .left-container {
+        width: 80vw;
+        height: auto;
+        position: static;
+        margin: 20px auto;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+    }
 
+    .logo-left {
+        height: 100px;
+    }
+
+    .name-top-right h1 {
+        font-size: 0.9rem;
+        margin-left: 20px;
+    }
+
+    .profile-picture {
+        height: 180px;
+        width: 180px;
+    }
+
+    .info h2 {
+        font-size: 1.2rem;
+    }
+
+    .social-media {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .hire-me-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .left-container {
+        width: 90vw;
+        padding: 5px;
+    }
+
+    .logo-left {
+        height: 100px;
+    }
+
+    .name-top-right h1 {
+        font-size: 0.8rem;
+        margin-left: 10px;
+    }
+
+    .profile-picture {
+        height: 220px;
+        width: 220px;
+    }
+
+    .info h2 {
+        font-size: 1.3rem;
+    }
+
+    .hire-me-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
 
 .right-container {
     height: 50vh;
     width: 0.1vw;
-    background-color: #333; /* Dark gray background for contrast */
+    background-color: #333;
     position: fixed;
     top: 140px;
-    right: 90px; /* Adjust the right margin as needed */
+    right: 90px;
     padding: 15px;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #fff; /* 1px solid white border */
-    border-radius: 20px; /* Adjust the border-radius as needed */
+    border: 1px solid #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease, right 0.3s ease;
 }
 
 .toggle-button {
@@ -181,6 +257,10 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .toggle-button i {
@@ -193,7 +273,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-right: 50px;
-    
 }
 
 .navbar ul {
@@ -209,7 +288,7 @@ body {
 }
 
 .navbar ul li a {
-    color: #fff; /* White text color */
+    color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
@@ -219,52 +298,72 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #FF9700; /* Darker gray for hover effect */
+    color: #FF9700;
 }
 
 .navbar ul li a i {
-    font-size: 0.9rem; /* Adjust the icon size as needed */
+    font-size: 0.9rem;
 }
-@media (max-width: 768px) {
-    .right-container {
-        top: auto;
-        bottom: 0;
-        right: 0;
-        width: 100vw;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .toggle-button {
-        display: block;
-        background-color: transparent;
-        color: #fff;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .right-container {
+        width: 20vw;
+        right: 30px;
+        display: none;
     }
 
     .navbar {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
         margin-right: 20px;
     }
+}
 
-    .navbar.active {
-        display: flex;
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .right-container {
+        width: 40vw;
+        right: 20px;
+        height: auto;
+        display: none;
     }
 
-    .navbar ul {
+    .toggle-button {
+        display: block; /* Show the toggle button on mobile devices */
+    }
+
+    .navbar {
+        display: none; /* Hide the navbar initially */
+    }
+
+    .right-container.active .navbar {
+        display: flex; /* Show the navbar when the container is active */
         flex-direction: column;
-        align-items: center;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .right-container {
+        width: 80vw;
+        right: 10px;
+        height: auto;
+        padding: 10px;
+        display: none;
     }
 
-    .navbar ul li {
-        width: 100%;
-        margin: 5px 0;
+    .toggle-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.8rem;
+    }
+
+    .navbar ul li a i {
+        font-size: 0.8rem;
     }
 }
 
@@ -276,6 +375,7 @@ body {
     margin: 0 auto;
     margin-right: 200px;
     max-width: 50%; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .middle-container {
@@ -345,36 +445,125 @@ body {
     font-size: 1rem;
     color: #888787;
 }
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
     .home-section {
-        padding: 20px;
+        max-width: 70%;
+        margin-right: 100px;
+        padding: 80px 15px;
+    }
+
+    .main-greeting h1 {
+        font-size: 3rem;
+    }
+
+    .main-greeting h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .experience-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .experience h1, .projects-completed h1 {
+        font-size: 2.5rem;
+    }
+
+    .experience p, .projects-completed p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .home-section {
         max-width: 90%;
-        left: 150px;
+        margin-right: 20px;
+        padding: 60px 10px;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 8px;
+        padding: 8px 8px;
     }
 
-    .main-greeting h1, .main-greeting h2 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+    .section-title i {
+        font-size: 0.6rem;
+    }
+
+    .main-greeting h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-greeting h2 {
+        font-size: 2rem;
     }
 
     .intro-text {
         font-size: 1rem;
-        max-width: 100%;
+    }
+
+    .experience h1, .projects-completed h1 {
+        font-size: 2rem;
+    }
+
+    .experience p, .projects-completed p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .home-section {
+        max-width: 95%;
+        margin-right: 0;
+        padding: 40px 10px;
+    }
+
+    .section-title {
+        font-size: 7px;
+        padding: 6px 6px;
+    }
+
+    .section-title i {
+        font-size: 0.5rem;
+    }
+
+    .main-greeting h1 {
+        font-size: 2rem;
+    }
+
+    .main-greeting h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .experience h1, .projects-completed h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience p, .projects-completed p {
+        font-size: 0.7rem;
     }
 
     .experience-section {
         flex-direction: column;
         align-items: center;
     }
-
-    .experience, .projects-completed {
-        margin-bottom: 20px;
-    }
 }
+
+
 /* About Section Styles */
 .about-section {
     padding: 100px 20px; /* Adjust padding as needed */
@@ -383,6 +572,7 @@ body {
     margin: 0 auto;
     margin-right: 200px;
     max-width: 50%; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .about-title {
@@ -427,28 +617,94 @@ body {
     max-width: 600px; /* Adjust as needed */
     line-height: 1.5;
 }
+/* Media Queries for Responsive Design */
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
     .about-section {
-        padding: 20px;
-        max-width: 90%;
-        left: 150px;
+        max-width: 70%;
+        margin-right: 100px;
+        padding: 80px 15px;
     }
 
     .about-title {
-        font-size: 1.5rem;
+        font-size: 10px;
+        padding: 8px 16px;
     }
 
-    .about-greeting h1, .about-greeting h2 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+    .about-greeting h1 {
+        font-size: 3rem;
+    }
+
+    .about-greeting h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .about-section {
+        max-width: 90%;
+        margin-right: 20px;
+        padding: 60px 10px;
+    }
+
+    .about-title {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+
+    .about-title i {
+        font-size: 0.6rem;
+    }
+
+    .about-greeting h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-greeting h2 {
+        font-size: 2rem;
     }
 
     .about-text {
         font-size: 1rem;
-        max-width: 100%;
     }
 }
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .about-section {
+        max-width: 95%;
+        margin-right: 0;
+        padding: 40px 10px;
+    }
+
+    .about-title {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+
+    .about-title i {
+        font-size: 0.5rem;
+    }
+
+    .about-greeting h1 {
+        font-size: 2rem;
+    }
+
+    .about-greeting h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Resume Section Styles */
 .resume-section {
@@ -458,6 +714,7 @@ body {
     margin: 0 auto;
     margin-right: 200px;
     max-width: 50%; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .resume-title {
@@ -533,36 +790,133 @@ body {
     color: #fff;
 }
 
+/* Media Queries for Responsive Design */
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
     .resume-section {
-        padding: 20px;
-        max-width: 90%;
-        left: 150px;
+        max-width: 70%;
+        margin-right: 100px;
+        padding: 80px 15px;
     }
 
     .resume-title {
-        font-size: 1.5rem;
+        font-size: 9px;
+        padding: 8px 16px;
     }
 
     .resume-heading {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem;
+    }
+
+    .timeline {
+        max-width: 600px;
+        padding: 15px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .resume-section {
+        max-width: 90%;
+        margin-right: 20px;
+        padding: 60px 10px;
+    }
+
+    .resume-title {
+        font-size: 8px;
+        padding: 6px 12px;
+    }
+
+    .resume-title i {
+        font-size: 0.6rem;
+    }
+
+    .resume-heading {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 25px;
+        padding: 8px 15px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    .timeline-date {
+        font-size: 0.85rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .resume-section {
+        max-width: 95%;
+        margin-right: 0;
+        padding: 40px 10px;
+    }
+
+    .resume-title {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+    .resume-title i {
+        font-size: 0.5rem;
+    }
+
+    .resume-heading {
+        font-size: 1.7rem;
     }
 
     .timeline-content {
         margin-left: 20px;
-        padding: 10px;
+        padding: 6px 10px;
+    }
+
+    .timeline-dot {
+        left: -10px;
+        width: 8px;
+        height: 8px;
     }
 
     .timeline-content h3 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .timeline-content p {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
     }
 }
+
+
 /* Skills Section Styles */
 .skills-section {
     padding: 10px 20px; /* Adjust padding as needed */
@@ -571,6 +925,7 @@ body {
     margin: 0 auto;
     left: 100px;
     max-width: 400px; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .section-title {
@@ -638,37 +993,108 @@ body {
     color: #fff; /* Text color for skill names */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
     .skills-section {
-        padding: 20px;
-        max-width: 100%; /* Ensure full width on smaller screens */
+        left: 0;
+        max-width: 70%;
+        padding: 10px 15px;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 10px;
+        padding: 8px 16px;
     }
 
     .skills-heading {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem;
     }
 
     .skill-item {
-        width: 100%; /* Full width for skill items on smaller screens */
-        padding: 10px;
+        width: 90%;
     }
 
     .skill-icon img {
-        width: 40px; /* Adjust icon size for smaller screens */
-        height: 40px; /* Adjust icon size for smaller screens */
+        width: 40px;
+        height: 40px;
     }
 
     .skill-percentage {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .skill-name {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .skills-section {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+
+    .skills-heading {
+        font-size: 2rem;
+    }
+
+    .skill-item {
+        width: 100%;
+    }
+
+    .skill-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-percentage {
+        font-size: 1.6rem;
+    }
+
+    .skill-name {
+        font-size: 0.85rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .skills-section {
+        max-width: 100%;
+        padding: 5px 10px;
+    }
+
+    .section-title {
+        font-size: 15px;
+        padding: 4px 10px;
+    }
+
+    .skills-heading {
+        font-size: 1.8rem;
+    }
+
+    .skill-item {
+        padding: 8px;
+    }
+
+    .skill-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill-percentage {
+        font-size: 1.4rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
     }
 }
 
@@ -681,6 +1107,7 @@ body {
     margin: 0 auto;
     left: 100px;
     max-width: 400px; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .services-title {
@@ -748,36 +1175,105 @@ body {
     margin: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
     .services-section {
-        padding: 20px;
-        max-width: 100%; /* Ensure full width on smaller screens */
+        left: 0;
+        max-width: 70%;
+        padding: 80px 15px;
     }
 
     .services-title {
-        font-size: 1.5rem;
+        font-size: 10px;
+        padding: 8px 16px;
     }
 
     .services-heading {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem;
     }
 
     .service-item {
-        width: 100%; /* Full width for service items on smaller screens */
+        width: 90%;
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+    }
+
+    .service-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .services-section {
+        max-width: 90%;
+        padding: 60px 10px;
+    }
+
+    .services-title {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+
+    .services-heading {
+        font-size: 2rem;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .service-icon {
+        font-size: 1.5rem;
+    }
+
+    .service-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-item p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .services-section {
+        max-width: 100%;
+        padding: 40px 10px;
+    }
+
+    .services-title {
+        font-size: 15px;
+        padding: 4px 10px;
+    }
+
+    .services-heading {
+        font-size: 1.8rem;
+    }
+
+    .service-item {
         padding: 15px;
     }
 
     .service-icon {
-        font-size: 1.5rem; /* Adjust icon size for smaller screens */
+        font-size: 1.3rem;
     }
 
     .service-item h3 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .service-item p {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -787,8 +1283,9 @@ body {
     text-align: center;
     position: relative;
     margin: 0 auto;
-    left: 100px;
+    left: 130px;
     max-width: 800px; /* Limit the maximum width */
+    overflow: hidden;
 }
 
 .portfolio-title {
@@ -875,22 +1372,93 @@ body {
     margin: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .portfolio-section {
+        left: 0;
+        max-width: 90%;
+        padding: 80px 15px;
+    }
+
+    .portfolio-title {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+
     .portfolio-heading {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem;
     }
 
     .portfolio-item {
-        max-width: 100%; /* Full width on smaller screens */
+        max-width: 45%; /* Adjust width to fit two items in a row */
     }
 
     .portfolio-overlay h3 {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 
     .portfolio-overlay p {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .portfolio-section {
+        max-width: 95%;
+        padding: 60px 10px;
+    }
+
+    .portfolio-title {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+
+    .portfolio-heading {
+        font-size: 2rem;
+    }
+
+    .portfolio-item {
+        max-width: 100%; /* Full width for each item */
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .portfolio-section {
+        max-width: 100%;
+        padding: 40px 10px;
+    }
+
+    .portfolio-title {
+        font-size: 15px;
+        padding: 4px 10px;
+    }
+
+    .portfolio-heading {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-item {
+        padding: 15px;
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.8rem;
     }
 }
 
@@ -986,18 +1554,118 @@ body {
     background-color: #e68a00; /* Darker shade on hover */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Adjust for tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .contact-section {
+        left: 0;
+        max-width: 90%;
+        padding: 80px 15px;
+    }
+
+    .contact-title {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+
     .contact-heading {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem;
     }
 
     .contact-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-info, .contact-form {
-        max-width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+        margin-bottom: 20px; /* Space between contact info and form */
     }
 }
 
+/* Adjust for mobile devices */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        max-width: 95%;
+        padding: 60px 10px;
+    }
+
+    .contact-title {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%;
+        margin-bottom: 15px; /* Space between contact info and form */
+    }
+
+    .contact-info .contact-item {
+        font-size: 0.9rem;
+    }
+
+    .contact-info .contact-item i {
+        font-size: 1.1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust for small mobile devices */
+@media screen and (max-width: 480px) {
+    .contact-section {
+        max-width: 100%;
+        padding: 40px 10px;
+    }
+
+    .contact-title {
+        font-size: 8px;
+        padding: 4px 10px;
+    }
+
+    .contact-heading {
+        font-size: 1.8rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%;
+        margin-bottom: 10px; /* Space between contact info and form */
+    }
+
+    .contact-info .contact-item {
+        font-size: 0.85rem;
+    }
+
+    .contact-info .contact-item i {
+        font-size: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.85rem;
+    }
+
+    .contact-form button {
+        font-size: 0.85rem;
+    }
+}
