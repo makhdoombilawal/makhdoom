@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makhdoom Bilawal - Full-Stack Web Developer Portfolio</title>
-    <meta name="description" content="Full-Stack Web Developer specializing in backend development with Python, FastAPI, Java, Spring Boot. Building scalable microservices and robust APIs.">
-    <meta name="keywords" content="Full-Stack Developer, Backend Developer, Python, FastAPI, Java, Spring Boot, Web Development, Bilawal Makhdoom">
+    <meta name="description"
+        content="Full-Stack Web Developer specializing in backend development with Python, FastAPI, Java, Spring Boot. Building scalable microservices and robust APIs.">
+    <meta name="keywords"
+        content="Full-Stack Developer, Backend Developer, Python, FastAPI, Java, Spring Boot, Web Development, Bilawal Makhdoom">
     <meta name="author" content="Makhdoom Bilawal">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Makhdoom Bilawal - Full-Stack Web Developer">
-    <meta property="og:description" content="Full-Stack Web Developer specializing in backend development with Python, FastAPI, Java, and Spring Boot.">
-    
+    <meta property="og:description"
+        content="Full-Stack Web Developer specializing in backend development with Python, FastAPI, Java, and Spring Boot.">
+    <meta property="og:image" content="img/bilo.png">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Makhdoom Bilawal - Full-Stack Web Developer">
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="img/bg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -29,388 +33,532 @@
     <div id="loading-spinner" class="loading-spinner">
         <div class="spinner"></div>
     </div>
-    
+
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" title="Go to top">
+    <button id="backToTop" class="back-to-top" title="Go to top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
-    <div class="left-container">
+
+    <!-- ===== LEFT SIDEBAR ===== -->
+    <aside class="left-container" aria-label="Profile sidebar">
         <div class="top-section">
-            <img src="bg.png" alt="Logo" class="logo-left">
+            <img src="img/bg.png" alt="Logo" class="logo-left">
             <div class="name-top-right">
-                <h1>Full-Stack Web Developer</h1>
+                <h1>Web Designer &amp;<br>Developer</h1>
             </div>
         </div>
         <div class="middle-section">
-            <img src="bilo.png" alt="Profile Picture" class="profile-picture">
+            <div class="profile-picture-container">
+                <img src="img/bilo.png" alt="Makhdoom Bilawal Profile Picture" class="profile-picture">
+            </div>
             <div class="info">
                 <h2>Makhdoom Bilawal</h2>
                 <p>Email: <span class="highlight">bilawalabbasi12@gmail.com</span></p>
-                <p>Location: <span class="highlight">Sindh,Pakistan</span></p>
+                <p>Location: <span class="highlight">Sindh, Pakistan</span></p>
                 <div class="social-media">
-                    <a href="https://instagram.com/bilawalabbasi01" target="_blank" class="social-icon"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com/in/bilawalabbasi" target="_blank" class="social-icon"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/makhdoombilawal" target="_blank" class="social-icon"><i
-                            class="fab fa-github"></i></a>
-                            <a href="https://wa.me/+923103920757" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-
+                    <a href="https://instagram.com/bilawalabbasi01" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/bilawalabbasi" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/makhdoombilawal" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/+923103920757" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
-                <a href="mailto:bilawalabbasi12@gmail.com" class="hire-me-button">HIRE ME! <i class="fas fa-paper-plane"></i></a>
-
+                <a href="mailto:bilawalabbasi12@gmail.com" class="hire-me-button">HIRE ME! <i
+                        class="fas fa-paper-plane"></i></a>
             </div>
         </div>
+    </aside>
+
+    <!-- ===== RIGHT NAV ===== -->
+    <div class="right-container" id="rightContainer">
+        <button class="toggle-button" onclick="toggleNavbar()" aria-label="Toggle navigation" aria-expanded="false"
+            id="navToggleBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" aria-label="Main navigation">
+            <ul>
+                <li><a href="#home" title="Home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
+                <li><a href="#resume" title="Resume"><i class="fa fa-file-alt"></i></a></li>
+                <li><a href="#skills" title="Skills"><i class="fas fa-cogs"></i></a></li>
+                <li><a href="#services" title="Services"><i class="fas fa-concierge-bell"></i></a></li>
+                <li><a href="#projects" title="Projects"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="right-container">
-    <button class="toggle-button" onclick="toggleNavbar()">
-        <i class="fas fa-bars"></i>
-    </button>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home"><i class="fas fa-home"></i></a></li>
-            <li><a href="#about"><i class="fas fa-user"></i></a></li>
-            <li><a href="#resume"><i class="fa fa-calendar"></i></a></li>
-            <li><a href="#skills"><i class="fas fa-cogs"></i></a></li>
-            <li><a href="#services"><i class="fas fa-concierge-bell"></i></a></li>
-            <li><a href="#projects"><i class="fas fa-briefcase"></i></a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
-        </ul>
-    </nav>
-</div>
-    <section id="home" class="home-section">
-        <div class="section-title">
-            <i class="fas fa-home"></i> INTRODUCTION
-        </div>
-        <div class="middle-container">
-            <div class="main-greeting fade-in">
-                <h1>Say Hi from <span class="highlight">Bilawal</span>,</h1>
-                <h2>Full-Stack Developer</h2>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+        <!-- HOME SECTION -->
+        <section id="home" class="home-section">
+            <div class="section-tag">
+                <i class="fas fa-home"></i> INTRODUCTION
             </div>
-            <p class="intro-text fade-in-delay">Specialized in backend development, building scalable microservices and robust APIs. Passionate about clean code, efficient database design, and creating seamless server-side solutions.</p>
-        </div>
-        <div class="experience-section">
-            <div class="experience hover-lift">
-                <h1 class="counter" data-target="1">0</h1>
-                <p>YEAR OF <br> EXPERIENCE</p>
+            <div class="middle-container">
+                <div class="main-greeting fade-in">
+                    <h1>Say Hi from <span class="highlight">Bilawal</span>,</h1>
+                    <h2>Full-Stack Developer</h2>
+                </div>
+                <p class="intro-text fade-in-delay">Specialized in backend development, building scalable microservices
+                    and robust APIs. Passionate about clean code, efficient database design, and creating seamless
+                    server-side solutions.</p>
             </div>
-            <div class="projects-completed hover-lift">
-                <h1 class="counter" data-target="8">0</h1>
-                <p>PROJECTS COMPLETED</p>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="about-section">
-        <div class="about-title">
-            <i class="fa fa-user"></i>
-            <span>ABOUT</span>
-        </div>
-        <div class="about-greeting">
-            <h1>Every great system begins with</h1>
-            <h2>an even better <span class="highlight">architecture</span></h2>
-        </div>
-        <p class="about-text">
-            My journey in backend development began with a passion for building robust and scalable systems. Specializing in Python and Java, I've developed microservices architectures, RESTful APIs, and efficient database solutions. I've worked with startups and NGOs, creating powerful backend systems that drive business value. I'm quietly confident, naturally curious, and constantly improving my skills, solving one complex problem at a time with clean, maintainable code.
-        </p>
-    </section>
-    <section id="resume" class="resume-section">
-        <div class="resume-title">
-            <i class="fa fa-calendar"></i>
-            <span>RESUME</span>
-        </div>
-        <h1 class="resume-heading">Education & Experience</h1>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Nov 2025 - Present</span>
-                    <h3>Backend Developer Intern</h3>
-                    <p>Interapreneur</p>
-                    <ul class="experience-details">
-                        <li>Developing scalable backend services using Python and FastAPI</li>
-                        <li>Implementing microservices architecture with Docker containerization</li>
-                        <li>Managing MySQL databases, optimizing queries, and ensuring data integrity</li>
-                        <li>Building RESTful APIs for seamless frontend-backend integration</li>
-                    </ul>
+            <div class="experience-section">
+                <div class="experience hover-lift">
+                    <h1 class="counter" data-target="1">0</h1>
+                    <p>YEAR OF <br> EXPERIENCE</p>
+                </div>
+                <div class="projects-completed hover-lift">
+                    <h1 class="counter" data-target="8">0</h1>
+                    <p>PROJECTS COMPLETED</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2023 - 2024</span>
-                    <h3>Frontend Developer Intern</h3>
-                    <p>FRDP NGO</p>
-                    <ul class="experience-details">
-                        <li>Built responsive and accessible web interfaces using HTML, CSS, and JavaScript</li>
-                        <li>Developed dynamic web applications integrating PHP backend with MySQL database</li>
-                        <li>Collaborated with cross-functional teams for timely project delivery</li>
-                        <li>Implemented user-friendly UI/UX designs for NGO initiatives</li>
-                    </ul>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="section-tag">
+                <i class="fa fa-user"></i> ABOUT
+            </div>
+            <div class="about-greeting">
+                <h1>Every great system begins with</h1>
+                <h2>an even better <span class="highlight">architecture</span></h2>
+            </div>
+            <p class="about-text">
+                My journey in backend development began with a passion for building robust and scalable systems.
+                Specializing in Python and Java, I've developed microservices architectures, RESTful APIs, and efficient
+                database solutions. I've worked with startups and NGOs, creating powerful backend systems that drive
+                business value. I'm quietly confident, naturally curious, and constantly improving my skills, solving
+                one complex problem at a time with clean, maintainable code.
+            </p>
+        </section>
+
+        <!-- RESUME SECTION -->
+        <section id="resume" class="resume-section">
+            <div class="section-tag">
+                <i class="fa fa-file-alt"></i> RESUME
+            </div>
+            <h2 class="section-heading">Education &amp; Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2025 - Present</span>
+                        <h3>Backend Developer Intern</h3>
+                        <p class="timeline-company">Interapreneur</p>
+                        <ul class="experience-details">
+                            <li>Developing scalable backend services using Python and FastAPI</li>
+                            <li>Implementing microservices architecture with Docker containerization</li>
+                            <li>Managing MySQL databases, optimizing queries, and ensuring data integrity</li>
+                            <li>Building RESTful APIs for seamless frontend-backend integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2024</span>
+                        <h3>Frontend Developer Intern</h3>
+                        <p class="timeline-company">FRDP NGO</p>
+                        <ul class="experience-details">
+                            <li>Built responsive and accessible web interfaces using HTML, CSS, and JavaScript</li>
+                            <li>Developed dynamic web applications integrating PHP backend with MySQL database</li>
+                            <li>Collaborated with cross-functional teams for timely project delivery</li>
+                            <li>Implemented user-friendly UI/UX designs for NGO initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - 2024</span>
+                        <h3>Front-End Development</h3>
+                        <p class="timeline-company">Great Learning</p>
+                        <h3>WordPress Development</h3>
+                        <p class="timeline-company">Skillable Academy</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2024</span>
+                        <h3>Bachelors in Information Technology</h3>
+                        <p class="timeline-company">Sindh Agriculture University Tandojam</p>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2022 - 2024</span>
-                    <h3>Front-End Development</h3>
-                    <p>Great Learning</p>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="section-tag">
+                <i class="fa fa-tasks"></i> MY SKILLS
+            </div>
+            <h2 class="section-heading">My Advantages</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-icon"><img src="img/html.png" alt="HTML5"></div>
+                    <div class="skill-percentage">92%</div>
+                    <div class="skill-name">HTML5</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><img src="img/css.png" alt="CSS3"></div>
+                    <div class="skill-percentage">85%</div>
+                    <div class="skill-name">CSS3</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><img src="img/js.png" alt="JavaScript"></div>
+                    <div class="skill-percentage">60%</div>
+                    <div class="skill-name">JavaScript</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-python" style="font-size:48px;color:#3776AB;"></i></div>
+                    <div class="skill-percentage">75%</div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-php" style="font-size:48px;color:#777BB4;"></i></div>
+                    <div class="skill-percentage">70%</div>
+                    <div class="skill-name">PHP</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-database" style="font-size:48px;color:#00758F;"></i></div>
+                    <div class="skill-percentage">80%</div>
+                    <div class="skill-name">MySQL</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-docker" style="font-size:48px;color:#2496ED;"></i></div>
+                    <div class="skill-percentage">65%</div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-bolt" style="font-size:48px;color:#009688;"></i></div>
+                    <div class="skill-percentage">70%</div>
+                    <div class="skill-name">FastAPI</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-java" style="font-size:48px;color:#007396;"></i></div>
+                    <div class="skill-percentage">75%</div>
+                    <div class="skill-name">Java</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-leaf" style="font-size:48px;color:#59666C;"></i></div>
+                    <div class="skill-percentage">70%</div>
+                    <div class="skill-name">Hibernate</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-leaf" style="font-size:48px;color:#6DB33F;"></i></div>
+                    <div class="skill-percentage">72%</div>
+                    <div class="skill-name">Spring Boot</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-section">
+            <div class="section-tag">
+                <i class="fas fa-concierge-bell"></i> SERVICES
+            </div>
+            <h2 class="section-heading">What I Offer</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>Building robust RESTful APIs and microservices with Python FastAPI, Java Spring Boot.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and dynamic websites tailored to your business needs.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database Design</h3>
+                    <p>Designing efficient MySQL databases with optimized queries and data integrity.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Logo Designing</h3>
+                    <p>Created logo designs for remote clients with a professional creative touch.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fab fa-wordpress"></i></div>
                     <h3>WordPress Development</h3>
-                    <p>Skillable Academy</p>
+                    <p>Building and customizing WordPress websites with Elementor and custom themes.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Social-Media Management</h3>
+                    <p>Socialize your brand with strategic social media presence and management.</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2019 - 2024</span>
-                    <h3>Bachelors in Information Technology</h3>
-                    <p>Sindh Agriculture University Tandojam</p>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="portfolio-section">
+            <div class="section-tag">
+                <i class="fas fa-briefcase"></i> PORTFOLIO
+            </div>
+            <h2 class="section-heading">My Work</h2>
+            <!-- Shop Management System — all 8 real screenshots -->
+            <div class="project-group">
+                <div class="project-group-header">
+                    <h3><i class="fab fa-github"></i> Shop Management System</h3>
+                    <p>A complete POS &amp; shop management system — Dashboard, POS, Products, Transactions, Customers, Reports, Barcode &amp; User Management.</p>
+                    <a href="https://github.com/makhdoombilawal/shop-management-system" target="_blank"
+                        rel="noopener noreferrer" class="project-btn">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="portfolio-container">
+                    <div class="portfolio-item">
+                        <img src="img/shop-dashboard.png" alt="Shop Management - Dashboard" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Dashboard</h3>
+                            <p>Overview of sales, revenue, and key business metrics at a glance.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-pos.png" alt="Shop Management - POS" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Point of Sale (POS)</h3>
+                            <p>Fast and intuitive POS interface for processing sales and payments.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-products.png" alt="Shop Management - Products" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Products</h3>
+                            <p>Manage product catalog with prices, categories, and stock levels.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-transactions.png" alt="Shop Management - Transactions" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Transactions</h3>
+                            <p>Full transaction history with filtering, search, and export options.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-customer.png" alt="Shop Management - Customers" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Customers</h3>
+                            <p>Customer database with purchase history and account management.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-report.png" alt="Shop Management - Business Report" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Business Reports</h3>
+                            <p>Detailed sales and revenue reports with visual charts and analytics.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-barcode.png" alt="Shop Management - Barcode Management" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Barcode Management</h3>
+                            <p>Generate and scan barcodes for quick product identification.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/shop-users.png" alt="Shop Management - User Management" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>User Management</h3>
+                            <p>Role-based user access control with permissions and audit logs.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="skills" class="skills-section">
-        <div class="section-title">
-            <i class="fa fa-tasks"></i>
-            <span>MY SKILLS</span>
-        </div>
-        <h1 class="skills-heading">My Advantages</h1>
-        <div class="skills-container">
-            <div class="skill-item">
-                <div class="skill-icon"><img src="html (2).png" alt="HTML"></div>
-                <div class="skill-percentage">92%</div>
-                <div class="skill-name">Html</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><img src="css (1).png" alt="CSS"></div>
-                <div class="skill-percentage">85%</div>
-                <div class="skill-name">Css</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><img src="js (1).png" alt="JavaScript"></div>
-                <div class="skill-percentage">60%</div>
-                <div class="skill-name">Javascript</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-python" style="font-size: 48px; color: #3776AB;"></i></div>
-                <div class="skill-percentage">75%</div>
-                <div class="skill-name">Python</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-php" style="font-size: 48px; color: #777BB4;"></i></div>
-                <div class="skill-percentage">70%</div>
-                <div class="skill-name">PHP</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-database" style="font-size: 48px; color: #00758F;"></i></div>
-                <div class="skill-percentage">80%</div>
-                <div class="skill-name">MySQL</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-docker" style="font-size: 48px; color: #2496ED;"></i></div>
-                <div class="skill-percentage">65%</div>
-                <div class="skill-name">Docker</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-bolt" style="font-size: 48px; color: #009688;"></i></div>
-                <div class="skill-percentage">70%</div>
-                <div class="skill-name">FastAPI</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-java" style="font-size: 48px; color: #007396;"></i></div>
-                <div class="skill-percentage">75%</div>
-                <div class="skill-name">Java</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-leaf" style="font-size: 48px; color: #59666C;"></i></div>
-                <div class="skill-percentage">70%</div>
-                <div class="skill-name">Hibernate</div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-leaf" style="font-size: 48px; color: #6DB33F;"></i></div>
-                <div class="skill-percentage">72%</div>
-                <div class="skill-name">Spring Boot</div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="services-section">
-        <div class="services-title">
-            <i class="fas fa-concierge-bell"></i>
-            <span>SERVICES</span>
-        </div>
-        <h1 class="services-heading">What I Offer</h1>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-code"></i></div>
-                <h3>Web Development</h3>
-                <p>Building responsive and dynamic websites tailored to your needs.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                <h3>Logo Designing</h3>
-                <p>Created logo designs for remote clients.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Social-Media Management</h3>
-                <p>Socialize Your Brand.</p>
-            </div>
-        </div>
-    </section>    
-    <section id="projects" class="portfolio-section">
-        <div class="portfolio-title">
-            <i class="fas fa-briefcase"></i>
-            <span>PORTFOLIO</span>
-        </div>
-        <h1 class="portfolio-heading">My Work</h1>
-        <div class="portfolio-container">
-            <div class="portfolio-item">
-                <img src="Screenshot 2024-07-03 122841.png" alt="Responsive Menu Bar for Restaurant Website" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Menu Bar</h3>
-                    <p>Created Responsive Menu Bar For Restaurant Website</p>
+
+            <div class="portfolio-container">
+                <!-- Restaurant Website -->
+                <div class="portfolio-item">
+                    <img src="img/restaurant-website.png" alt="Responsive Restaurant Website" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Restaurant Website</h3>
+                        <p>Fully responsive restaurant website with dynamic menu and booking features.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/makhdoombilawal" target="_blank"
+                                rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Bar -->
+                <div class="portfolio-item">
+                    <img src="img/menu-bar.png" alt="Responsive Menu Bar" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Restaurant Menu Bar</h3>
+                        <p>Interactive responsive menu bar designed for a restaurant website.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/makhdoombilawal" target="_blank"
+                                rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Portfolio -->
+                <div class="portfolio-item">
+                    <img src="img/custom-portfolio.png" alt="Custom Portfolio Template" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Portfolio</h3>
+                        <p>Sleek, fully customizable developer portfolio template built from scratch.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/makhdoombilawal" target="_blank"
+                                rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="Screenshot 2024-07-03 122642.png" alt="Responsive Restaurant Website" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Restaurant Website</h3>
-                    <p>Developed Responsive Restaurant Website For Internship</p>
+
+            <!-- GitHub CTA -->
+            <div class="github-cta">
+                <p>See all my projects on GitHub</p>
+                <a href="https://github.com/makhdoombilawal" target="_blank" rel="noopener noreferrer"
+                    class="github-btn">
+                    <i class="fab fa-github"></i> View GitHub Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="section-tag">
+                <i class="fas fa-envelope"></i> CONTACT
+            </div>
+            <h2 class="section-heading">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Sindh, Pakistan</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(+92) 310-3920757</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>bilawalabbasi12@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <p><a href="https://github.com/makhdoombilawal" target="_blank" rel="noopener noreferrer"
+                                style="color:var(--primary-color);text-decoration:none;">github.com/makhdoombilawal</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <input type="hidden" name="access_key" value="0a9155d7-a0e7-4841-9d2c-f9bdf307003c">
+                        <input type="text" name="name" id="contactName" placeholder="Your Name" required>
+                        <input type="email" name="email" id="contactEmail" placeholder="Your Email" required>
+                        <textarea name="message" id="contactMessage" placeholder="Your Message" required></textarea>
+                        <button type="submit" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="Screenshot 2024-06-13 035801.png" alt="Custom Portfolio Template" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Custom Portfolio</h3>
-                    <p>Created Custom Portfolio Template</p>
-                </div>
-            </div>
-    </section>
-    <section id="contact" class="contact-section">
-        <div class="contact-title">
-            <i class="fas fa-envelope"></i>
-            <span>CONTACT</span>
-        </div>
-        <h1 class="contact-heading">Get In Touch</h1>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Sindh,Pakistan</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>(+92)310-3920757</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>bilawalabbasi12@gmail.com</p>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="0a9155d7-a0e7-4841-9d2c-f9bdf307003c">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section> 
+        </section>
+
+    </main><!-- end .main-content -->
 
     <script>
-        // Loading Spinner
-        window.addEventListener('load', function() {
+        // ── Loading Spinner ──
+        window.addEventListener('load', function () {
             const spinner = document.getElementById('loading-spinner');
             setTimeout(() => {
                 spinner.style.opacity = '0';
-                setTimeout(() => {
-                    spinner.style.display = 'none';
-                }, 300);
+                setTimeout(() => { spinner.style.display = 'none'; }, 300);
             }, 500);
         });
 
-        // Back to Top Button
+        // ── Back to Top ──
         const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
+        window.addEventListener('scroll', function () {
+            backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        backToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        // ── Toggle Navbar (mobile) ──
+        function toggleNavbar() {
+            const rc = document.getElementById('rightContainer');
+            const btn = document.getElementById('navToggleBtn');
+            const isOpen = rc.classList.toggle('active');
+            btn.setAttribute('aria-expanded', isOpen);
+            btn.querySelector('i').className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+        }
+
+        // Close mobile nav when a link is clicked
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                const rc = document.getElementById('rightContainer');
+                const btn = document.getElementById('navToggleBtn');
+                rc.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.querySelector('i').className = 'fas fa-bars';
             });
         });
 
-        // Toggle Navbar for Mobile
-        function toggleNavbar() {
-            const rightContainer = document.querySelector('.right-container');
-            const navbar = document.querySelector('.navbar');
-            rightContainer.classList.toggle('active');
-            navbar.classList.toggle('active');
-        }
-
-        // Smooth Scrolling for Navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('nav a');
-            for (const link of links) {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    // Close mobile menu after clicking
-                    const rightContainer = document.querySelector('.right-container');
-                    const navbar = document.querySelector('.navbar');
-                    rightContainer.classList.remove('active');
-                    navbar.classList.remove('active');
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+        document.addEventListener('DOMContentLoaded', function () {
+            // ── Smooth Scrolling ──
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    e.preventDefault();
+                    const target = document.getElementById(href.substring(1));
+                    if (target) {
+                        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                    }
                 });
-            }
+            });
 
-            // Active Nav State on Scroll
+            // ── Active Nav on Scroll ──
             const sections = document.querySelectorAll('section');
-            window.addEventListener('scroll', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            window.addEventListener('scroll', function () {
                 let current = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - 200)) {
+                    if (pageYOffset >= section.offsetTop - 200) {
                         current = section.getAttribute('id');
                     }
                 });
-
-                links.forEach(link => {
+                navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
+                    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
                 });
             });
 
-            // Animated Counters
+            // ── Animated Counters ──
             const counters = document.querySelectorAll('.counter');
             let countingStarted = false;
-
             function startCounting() {
                 if (countingStarted) return;
                 countingStarted = true;
-
                 counters.forEach(counter => {
                     const target = parseInt(counter.getAttribute('data-target'));
                     const increment = target / 100;
                     let count = 0;
-
                     const updateCounter = () => {
                         count += increment;
                         if (count < target) {
@@ -423,38 +571,87 @@
                     updateCounter();
                 });
             }
-
-            // Trigger counter when experience section is visible
-            const experienceSection = document.querySelector('.experience-section');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        startCounting();
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            if (experienceSection) {
-                observer.observe(experienceSection);
+            const expSection = document.querySelector('.experience-section');
+            if (expSection) {
+                new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) startCounting();
+                }, { threshold: 0.5 }).observe(expSection);
             }
 
-            // Scroll Animation for Elements
-            const animateOnScroll = document.querySelectorAll('.fade-in, .fade-in-delay, .hover-lift, .skill-item, .service-item, .portfolio-item, .timeline-item');
-            
-            const scrollObserver = new IntersectionObserver((entries) => {
+            // ── Scroll-reveal Animations ──
+            const revealEls = document.querySelectorAll(
+                '.fade-in, .fade-in-delay, .hover-lift, .skill-item, .service-item, .portfolio-item, .timeline-item'
+            );
+            const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
                 });
             }, { threshold: 0.1 });
+            revealEls.forEach(el => revealObserver.observe(el));
 
-            animateOnScroll.forEach(el => {
-                scrollObserver.observe(el);
+            // ── Image Lightbox Modal ──
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Do not open if clicking links/buttons
+                    if (e.target.closest('.project-links') || e.target.closest('a') || e.target.tagName === 'A') {
+                        return;
+                    }
+                    const img = item.querySelector('img');
+                    if (img) {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        
+                        // Extract caption text from heading inside item overlay
+                        const heading = item.querySelector('.portfolio-overlay h3');
+                        lightboxCaption.textContent = heading ? heading.textContent : img.alt;
+                        
+                        lightbox.classList.add('active');
+                        lightbox.setAttribute('aria-hidden', 'false');
+                        document.body.style.overflow = 'hidden'; // Stop page scrolling behind lightbox
+                    }
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                // Clear source after transition to prevent flashes
+                setTimeout(() => {
+                    lightboxImg.src = '';
+                    lightboxCaption.textContent = '';
+                }, 300);
+            };
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Close lightbox on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
             });
         });
     </script>
-    
-</body>
 
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+</body>
 </html>
